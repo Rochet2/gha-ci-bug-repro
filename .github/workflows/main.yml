@@ -3,10 +3,10 @@ on:
 
 jobs:
   my_job:
+    if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
     name: deploy to staging
     runs-on: ubuntu-latest
     steps:
       - name: Setup Node
         run: |
           echo foobar
-        if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
