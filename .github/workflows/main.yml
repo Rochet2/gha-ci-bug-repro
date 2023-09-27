@@ -9,3 +9,4 @@ jobs:
       - name: Setup Node
         run: |
           echo foobar
+        if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
